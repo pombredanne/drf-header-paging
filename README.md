@@ -3,13 +3,17 @@ Header-based paginf for django-rest-framework 3.0 (does not use new 3.1 paging A
 
 Handles HTTP header Range and respond with Content-Range with unit 'items' to slice your queryset.
 
+# Status
+
+coding in process
+
 # Behaviour
 * no header: slice queryset as [:default_limit]
-* `Range: items N-`: [N:default_limit]
+* `Range: items N-`: [N:][:default_limit]
 * `Range: items N-M`: [N:M]
 * `Range: items N-OOB`: returns HTTP 416 response with `Content-Range: */total`
 * `Range: items OOB-*`: returns HTTP 416 response with `Content-Range: */total`
-* `Range: items -M`: slice [-M:default_limit]
+* `Range: items -M`: slice [-M:][:default_limit]
 
 Header `Accept-Range` is not installed
 
