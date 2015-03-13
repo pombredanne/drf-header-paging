@@ -13,7 +13,7 @@ coding in process
 * `Range: items N-M`: [N:M]
 * `Range: items N-OOB`: returns HTTP 416 response with `Content-Range: */total`
 * `Range: items OOB-*`: returns HTTP 416 response with `Content-Range: */total`
-* `Range: items -M`: slice [-M:][:default_limit]
+* `Range: items -M`: slice [-M:]
 
 Header `Accept-Range` is not installed
 
