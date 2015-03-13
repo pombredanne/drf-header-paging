@@ -10,7 +10,7 @@ coding in process
 # Behaviour
 * no header: slice queryset as [:default_limit]
 * `Range: items N-`: [N:][:default_limit]
-* `Range: items N-M`: [N:M]
+* `Range: items N-M`: [N:M+1]
 * `Range: items N-OOB`: returns HTTP 416 response with `Content-Range: */total`
 * `Range: items OOB-*`: returns HTTP 416 response with `Content-Range: */total`
 * `Range: items -M`: slice [-M:]
